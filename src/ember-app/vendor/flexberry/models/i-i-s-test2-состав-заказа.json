@@ -1,0 +1,123 @@
+﻿{
+  "name": "IISTest2СоставЗаказа",
+  "modelName": "i-i-s-test2-состав-заказа",
+  "className": "СоставЗаказа",
+  "nameSpace": "IIS.Test2",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "адрес",
+      "type": "i-i-s-test2-место-выдачи",
+      "flexberryType": "МестоВыдачи",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодСостЗак",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерТел",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "состояние",
+      "type": "i-i-s-test2-состояния",
+      "flexberryType": "Состояния",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "стоимость",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказ",
+      "relatedTo": "i-i-s-test2-заказ",
+      "inverse": "составЗаказа"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СоставЗаказаE",
+      "modelName": "i-i-s-test2-состав-заказа",
+      "attrs": [
+        {
+          "name": "адрес",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "кодСостЗак",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "количество",
+          "caption": "",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "номерТел",
+          "caption": "",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "состояние",
+          "caption": "",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "стоимость",
+          "caption": "",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
